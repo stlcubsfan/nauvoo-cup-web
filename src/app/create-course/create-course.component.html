@@ -1,0 +1,43 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h2>Create a Course</h2>
+    <form (ngSubmit)="saveCourse()" #courseForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" 
+          required [(ngModel)]="course.name" #name="ngModel" name="name">
+        <div class="alert alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+          Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" 
+          [(ngModel)]="course.address" #address="ngModel" name="name">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" 
+          [(ngModel)]="course.city" #city="ngModel" name="city">
+      </div>
+      <div class="form-group">
+        <label for="address">State</label>
+        <input type="text" class="form-control" id="state" 
+          [(ngModel)]="course.state" #state="ngModel" name="state">
+      </div>
+      <div class="form-group">
+        <label for="zipCode">Zip Code</label>
+        <input type="text" class="form-control" id="zipCode" 
+          appZipCodeValidation
+          [(ngModel)]="course.zipCode" #zipCode="ngModel" name="zipCode">
+        <div class="alert alert-danger" *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)">
+          <div  *ngIf="zipCode.errors.appZipCodeValidation">
+            Zip Code must be in the proper format (5 or 9 digts)
+          </div>
+        </div>          
+      </div>       
+      <button type="submit" class="btn btn-success" [disabled]="!courseForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newCourse(); courseFormForm.reset()">Reset Form</button>                
+    </form>
+  </div>
+</div>
