@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { CourseService } from './shared/course.service';
 
@@ -12,7 +13,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent, CreateCourseComponent
-      ], imports: [ FormsModule ],
+      ], imports: [ FormsModule, RouterTestingModule ],
       providers: [{provide: CourseService, useValue: courseServiceStub}]
     }).compileComponents();
   }));

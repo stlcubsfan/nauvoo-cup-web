@@ -1,5 +1,5 @@
 <div class="container">
-  <div [hidden]="submitted">
+  <div>
     <h2>Create a Course</h2>
     <form (ngSubmit)="saveCourse()" #courseForm="ngForm">
       <div class="form-group">
@@ -30,8 +30,8 @@
         <input type="text" class="form-control" id="zipCode" 
           appZipCodeValidation
           [(ngModel)]="course.zipCode" #zipCode="ngModel" name="zipCode">
-        <div class="alert alert-danger" *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)">
-          <div  *ngIf="zipCode.errors.appZipCodeValidation">
+        <div id="zipCodeValidation" class="alert alert-danger" *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)">
+          <div *ngIf="zipCode.errors.appZipCodeValidation">
             Zip Code must be in the proper format (5 or 9 digts)
           </div>
         </div>          

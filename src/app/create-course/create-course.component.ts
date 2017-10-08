@@ -10,6 +10,7 @@ import { CourseService } from '../shared/course.service';
 export class CreateCourseComponent implements OnInit {
 
   course: Course = new Course();
+  saveErrored: boolean = false;
 
   constructor(private courseService: CourseService) { }
 
@@ -21,14 +22,14 @@ export class CreateCourseComponent implements OnInit {
   }
 
   saveCourse() {
+    this.saveErrored = true;
     this.courseService.saveCourse(this.course)
     .subscribe(
       data => {
         this.course = new Course();
-        console.log(data);
       },
       err => {
-        console.log(err);
+        this.saveErrored = true;
       }
     )
   }
