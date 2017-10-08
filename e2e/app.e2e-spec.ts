@@ -11,4 +11,8 @@ describe('nauvoo-cup-web App', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
+
+  it('should display create course', () => {
+    expect(page.getCreateCourseHeader()).toEqual('Create a Course');
+  });
 });
