@@ -1,0 +1,22 @@
+.courses-header {
+    display: flex;
+}
+
+.course-header-action {
+    background-color: #333;
+    opacity: 75%;
+    flex: 0 0 10%;
+    border: 1px solid #666;
+    border-width: 0 1px;
+    display: flex;
+    padding: 20px;
+}
+
+.courses-banner {
+    padding-top: 15px;
+    background: #008000;
+    padding-left: 10px;
+    color: white;
+    flex: 1;
+    display: flex;
+}

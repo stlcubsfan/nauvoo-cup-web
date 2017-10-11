@@ -1,6 +1,18 @@
+<div class="courses-header">
+  <div class="course-header-action">
+    <a [routerLink]="['/courses']" class="btn-stacked-icon">
+      <span class="fa fa-list btn-stacked-icon-base">
+        <i class="fa fa-repeat btn-stacked-icon-top"></i>
+      </span>
+    </a>
+  </div>
+  <div class="courses-banner">
+    <h2>Create a Course</h2>
+  </div>
+</div>
+
 <div class="container">
   <div>
-    <h2>Create a Course</h2>
     <form (ngSubmit)="saveCourse()" #courseForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>

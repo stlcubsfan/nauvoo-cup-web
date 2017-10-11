@@ -1,0 +1,117 @@
+.courses-header {
+    display: flex;
+}
+
+.course-header-action {
+    background-color: #333;
+    opacity: 75%;
+    flex: 0 0 10%;
+    border: 1px solid #666;
+    border-width: 0 1px;
+    display: flex;
+    padding: 20px;
+}
+
+.courses-banner {
+    padding-top: 15px;
+    background: #008000;
+    padding-left: 10px;
+    color: white;
+    flex: 1;
+    display: flex;
+}
+
+.course-list {
+    padding-top: 20px;
+}
+
+.course-list .course-list-headers {
+    display: flex;
+    font-size: 13px;
+    position: relative;
+    margin: 0 0 10px;
+}
+.course-list .course-article {
+    display: flex;
+    font-size: 13px;
+    position: relative;
+    margin: 0 0 10px;
+    height: 55px;
+    background: #eee;
+    border: 1px solid #dbdee0;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
+.course-list .course-article:hover {
+    background: #d3ffd3;
+    border-color: rgba(0,128,0,0.75);
+}
+.course-article .col, .course-list-headers .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+.course-article .col b, .course-article .col i {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.course-article .col i {
+    font-style: normal;
+}
+.course-name {
+    flex: .75 0 20%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.course-address {
+    flex: .75 0 165px;
+}
+
+.course-list-headers {
+    text-transform: uppercase;
+}
+.course-article .actions, .course-list-headers .actions {
+    flex: 0 0 50px;
+    display: flex;
+    padding: 0;
+    border-left: 1px dotted #dbdee0;
+    overflow: visible;
+}
+
+.course-list-headers .actions {
+    border: 0;
+}
+
+.course-article .actions .more {
+    flex: 1;
+    display: flex;
+    color: #008000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 40px;
+    line-height: 28px;
+    justify-content: center;
+    cursor: pointer;
+}
+.dropdown-toggle::after {
+    border: 0;
+}
+.dropdown-menu-left {
+    left: -110px;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    border: 1px solid rgba(0, 128, 0, 0.75);
+    box-shadow: 5px 5px rgba(0,0,0,0.2);
+}

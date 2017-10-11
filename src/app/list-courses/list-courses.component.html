@@ -1,0 +1,48 @@
+<div class="courses-header">
+  <div class="course-header-action">
+    <a [routerLink]="['/courses/new']" class="btn-stacked-icon">
+      <span class="fa fa-file-o btn-stacked-icon-base">
+        <i class="fa fa-plus-circle btn-stacked-icon-top"></i>
+      </span>
+    </a>
+  </div>
+  <div class="courses-banner">
+    <h2>Courses</h2>
+  </div>
+</div>
+<div class="course-list container-fluid">
+  <div class="course-list-headers">
+    <div class="course-name col">
+      Course
+    </div>
+    <div class="course-address col">
+      Address
+    </div>
+    <div class="actions col">
+
+    </div>
+  </div>
+  <article *ngFor="let course of courses" class="course-article">
+    <div class="course-name col">
+      {{course.name}}
+    </div>
+    <div class="course-address col">
+      {{course.address}}<br/>
+      {{course.city}}
+      {{course.state}}  {{course.zipCode}}
+    </div>
+    <div class="actions col">
+      <a class="more dropdown-toggle" data-toggle="dropdown">...</a>
+      <ul class="dropdown-menu dropdown-menu-left">
+        <li class="dropdown-item">
+          Open/Edit
+        </li>
+        <li class="dropdown-item">
+          Create Sub-Course
+        </li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+

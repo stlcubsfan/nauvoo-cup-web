@@ -7,12 +7,9 @@ describe('nauvoo-cup-web App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  xit('should display welcome message', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 
-  it('should display create course', () => {
-    expect(page.getCreateCourseHeader()).toEqual('Create a Course');
-  });
 });
