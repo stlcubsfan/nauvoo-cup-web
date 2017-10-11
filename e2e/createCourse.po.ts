@@ -2,11 +2,11 @@ import { browser, by, element } from 'protractor';
 
 export class CreateCoursePage {
   navigateTo() {
-    return browser.get('/courses');
+    return browser.get('/courses/new');
   }
 
   getCreateCourseHeader() {
-    return element(by.css('app-create-course div div h2')).getText();
+    return element(by.css('.courses-banner h2')).getText();
   }
 
   getCourseNameInput() {
