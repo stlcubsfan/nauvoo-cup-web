@@ -11,6 +11,7 @@ import { CourseService } from './shared/course.service';
 import { AppComponent } from './app.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { ZipCodeValidationDirective } from './zip-code-validation.directive';
+import { TopNavComponent } from './top-nav/top-nav.component';
 
 const appRoutes: Routes = [
   {
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CreateCourseComponent,
-    ZipCodeValidationDirective
+    ZipCodeValidationDirective,
+    TopNavComponent
   ],
   imports: [
     BrowserModule,
