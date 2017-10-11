@@ -12,10 +12,15 @@ import { AppComponent } from './app.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { ZipCodeValidationDirective } from './zip-code-validation.directive';
 import { TopNavComponent } from './top-nav/top-nav.component';
+import { ListCoursesComponent } from './list-courses/list-courses.component';
 
 const appRoutes: Routes = [
   {
     path: 'courses',
+    component: ListCoursesComponent
+  },  
+  {
+    path: 'courses/new',
     component: CreateCourseComponent
   }, {
     path: '',
@@ -29,7 +34,8 @@ const appRoutes: Routes = [
     AppComponent,
     CreateCourseComponent,
     ZipCodeValidationDirective,
-    TopNavComponent
+    TopNavComponent,
+    ListCoursesComponent
   ],
   imports: [
     BrowserModule,

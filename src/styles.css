@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+.btn-stacked-icon {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    color: #66b;
+    padding: 0;
+    color: #66b;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+.btn-stacked-icon:hover .btn-stacked-icon-base {
+    opacity: 1;
+    cursor: pointer;
+}
+.btn-stacked-icon-base {
+    font-size: 28px;
+    margin: 0 auto;
+    width: 29px;
+    position: relative;
+    color: #008000;
+    opacity: 0.6;
+    transition: all .2ps
+}
+.btn-stacked-icon-top {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    font-size: 21px;
+}

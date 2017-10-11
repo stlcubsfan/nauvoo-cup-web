@@ -19,4 +19,9 @@ export class CourseService {
         .map(data => data);
     }
   }
+
+  listCourses(): Observable<Course[]> {
+    return this.apiService.get('/courses')
+      .map(data => data);
+  }
 }
